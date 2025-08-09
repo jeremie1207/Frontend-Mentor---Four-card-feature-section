@@ -156,6 +156,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-block-start: 5rem;
 }
 
+.border-bottom-radius {
+    border-end-start-radius : 0.3rem;
+    border-end-end-radius: 0.3rem;
+}
+
 @media (min-width : 50rem) {
     .align-self-center {
         align-self: center;
