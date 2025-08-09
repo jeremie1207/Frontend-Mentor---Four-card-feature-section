@@ -178,7 +178,7 @@ main {
 }
 
 .card {
-    box-shadow: var(--clr-neutral-grey-400) 0px 20px 30px -10px;
+    box-shadow: var(--clr-neutral-grey-400) 0px 5px 5px -3.5px;
 }
 
 .supervisor {
