@@ -1,0 +1,199 @@
+/*variables */
+:root {
+    --clr-primary-red : hsl(0, 78%, 62%);
+    --clr-primary-cyan : hsl(180, 62%, 55%);
+    --clr-primary-orange: hsl(34, 97%, 64%);
+    --clr-primary-blue: hsl(212, 86%, 64%);
+
+    --clr-neutral-grey-500: hsl(234, 12%, 34%);
+    --clr-neutral-grey-400: hsl(212, 6%, 44%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --fs-primary: 15px;
+    --ff-primary : "Poppins", sans-serif;
+
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+/*Reset*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*global*/
+
+.body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-200);
+}
+
+/*composition*/
+
+.layout {
+    inline-size: 90%;
+    place-items: center;
+}
+
+@media (min-width : 50rem) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .supervisor {
+        grid-area: span 2 / 1;
+    }
+
+    .karma {
+        grid-area: 2 / 2;
+    }
+
+    .calculator {
+        grid-area : span 2 / 3;
+    }
+}
+
+/*utilities*/
+
+.mg-inline-auto {
+  margin-inline: auto;
+}
+
+.fw-200 {
+    font-weight: var(--fw-200);
+}
+.fw-600 {
+    font-weight: var(--fw-600);
+}
+
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+.block {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.mg-top-1rem{
+    margin-block-start: 1rem;
+}
+
+.padding-2rem {
+    padding: 2rem;
+}
+
+.border-top {
+    border-block-start: 0.3rem solid red;
+}
+
+
+.max-width-400 {
+    max-inline-size: 25rem;
+}
+
+.max-width-450 {
+    max-inline-size: 28rem;
+}
+
+.mg-block-start-5rem {
+    margin-block-start: 5rem;
+}
+
+@media (min-width : 50rem) {
+    .align-self-center {
+        align-self: center;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+}
+
+/*block*/
+
+main {
+    margin-block-start : 3rem;
+}
+
+.card {
+    box-shadow: var(--clr-neutral-grey-400) 0px 20px 30px -10px;
+}
+
+.supervisor {
+    border-block-start-color: var(--clr-primary-cyan);
+}
+
+.team-builder {
+    border-block-start-color: var(--clr-primary-red);
+}
+
+.karma {
+    border-block-start-color: var(--clr-primary-orange);
+}
+
+.calculator {
+    border-block-start-color: var(--clr-primary-blue);
+}
+
+.icon {
+    margin-block-start: 1.5rem;
+    justify-self: end;
+}
+
+/*exception*/
